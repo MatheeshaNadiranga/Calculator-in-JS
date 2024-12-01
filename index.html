@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced Scientific Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="calculator">
+    <div class="display">
+      <input type="text" id="output" disabled>
+      <div class="history" id="history"></div>
+    </div>
+    <div class="mode-toggle">
+      <button id="theme-toggle">Toggle Dark Mode</button>
+    </div>
+    <div class="buttons">
+      
+      <button class="btn function" onclick="clearAll()">C</button>
+      <button class="btn function" onclick="deleteLast()">DEL</button>
+      <button class="btn operator" onclick="insert('%')">%</button>
+      <button class="btn operator" onclick="insert('/')">/</button>
+
+     
+      <button class="btn number" onclick="insert('7')">7</button>
+      <button class="btn number" onclick="insert('8')">8</button>
+      <button class="btn number" onclick="insert('9')">9</button>
+      <button class="btn operator" onclick="insert('*')">*</button>
+
+     
+      <button class="btn number" onclick="insert('4')">4</button>
+      <button class="btn number" onclick="insert('5')">5</button>
+      <button class="btn number" onclick="insert('6')">6</button>
+      <button class="btn operator" onclick="insert('-')">-</button>
+
+      
+      <button class="btn number" onclick="insert('1')">1</button>
+      <button class="btn number" onclick="insert('2')">2</button>
+      <button class="btn number" onclick="insert('3')">3</button>
+      <button class="btn operator" onclick="insert('+')">+</button>
+
+      <!-- Row 5: 0, ., Equals, Advanced Functions -->
+      <button class="btn number" onclick="insert('0')">0</button>
+      <button class="btn number" onclick="insert('.')">.</button>
+      <button class="btn equals" onclick="calculate()">=</button>
+      <button class="btn advanced" onclick="showScientific()">Adv</button>
+    </div>
+
+    <!-- Advanced Functions Panel -->
+    <div class="scientific-functions" id="scientific-functions">
+      <button class="btn" onclick="insert('Math.sin(')">sin</button>
+      <button class="btn" onclick="insert('Math.cos(')">cos</button>
+      <button class="btn" onclick="insert('Math.tan(')">tan</button>
+      <button class="btn" onclick="insert('Math.log10(')">log</button>
+      <button class="btn" onclick="insert('Math.log(')">ln</button>
+      <button class="btn" onclick="insert('Math.sqrt(')">√</button>
+      <button class="btn" onclick="insert('Math.pow(')">^</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
